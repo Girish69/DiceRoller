@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void on_button_click(View view)
     {
-        TextView tv = (TextView) this.findViewById(R.id.RollDice);
+        TextView tv = (TextView) this.findViewById(R.id.DiceRoll);
 
         Random r = new Random();
 
@@ -90,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (n < 1 || n > 6)
         {
-            Toast.makeText(this, "Invalid input, the number must be between 1 - 6", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Incorrect input, this number has to be between 1 - 6", Toast.LENGTH_SHORT).show();
         }
         else if (n == number)
         {
-            Toast.makeText(this, "CONGRATULATION!, The number is a match!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "CONGRATULATIONS!, The number is has the correct input", Toast.LENGTH_SHORT).show();
             counter = counter  +1;
             base.setText(Integer.toString(counter));
         }
